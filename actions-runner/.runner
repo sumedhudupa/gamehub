@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "First",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus9.actions.githubusercontent.com/AUFfIRS3Ngu7OBpq3EaP5022rytbs303W4iiCsDBWMytndnebh/",
+  "gitHubUrl": "https://github.com/sumedhudupa/gamehub",
+  "workFolder": "./run.cmd",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
