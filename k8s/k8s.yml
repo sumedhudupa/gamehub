@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gamehub-automated-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gamehub-automated-app
+  template:
+    metadata:
+      labels:
+        app: gamehub-automated-app
+    spec:
+      containers:
+        - name: gamehub-automated-app
+          image: 8sem/gamehub-automated-app:latest # Replace with your Docker Hub image
+          ports:
+            - containerPort: 5173
+ 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gamehub-automated-app-service
+spec:
+  type: NodePort
+  selector:
+    app: gamehub-automated-app
+  ports:
+    - protocol: TCP
+      port: 5173
+      targetPort: 5173
